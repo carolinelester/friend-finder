@@ -154,7 +154,7 @@
 
 	<footer>
 		<div class="container">
-			<a href="/api/friends">Discover Friends Nearby API</a>
+			<a href="../data/friends.js">Discover Friends Nearby API</a>
 			<span>|</span>
 			<a href="https://github.com/yoonslee/FriendFinder">GitHub Repo</a>
 		</div>
@@ -200,8 +200,7 @@
 			};
 
 			var currentURL = window.location.origin;
-
-\			$.post(currentURL + "/api/friends", newUser, function(data) {
+			$.post(currentURL + "/api/friends", newUser, function(data) {
 				$("#bestFriend").text(data.name);
 				$("#bestFriendPhoto").attr("src", data.photo);
 				$("#bestFriendModal").modal("toggle");
